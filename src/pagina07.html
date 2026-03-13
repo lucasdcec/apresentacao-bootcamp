@@ -1,0 +1,236 @@
+<!doctype html>
+
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>First Step - Funcionalidades-Chave</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Open+Sans:wght@400;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Open Sans", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f8fafc;
+      }
+      .slide-container {
+        width: 1280px;
+        height: 720px;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        background-color: #ffffff;
+        position: relative;
+      }
+      .font-heading {
+        font-family: "Montserrat", sans-serif;
+      }
+      .feature-card {
+        transition: all 0.3s ease;
+      }
+      .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow:
+          0 10px 15px -3px rgba(0, 0, 0, 0.1),
+          0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      }
+      .icon-wrapper {
+        transition: all 0.3s ease;
+      }
+      .feature-card:hover .icon-wrapper {
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide-container px-16 py-10">
+      <!-- Background Pattern -->
+      <div class="absolute top-0 left-0 w-full h-2 bg-teal-500 z-20"></div>
+      <div
+        class="absolute top-0 right-0 w-64 h-64 bg-slate-50 rounded-bl-full z-0"
+      ></div>
+      <!-- Header Section -->
+      <div class="w-full flex justify-between items-end mb-10 z-10 relative">
+        <div>
+          <div class="flex items-center gap-3 mb-2">
+            <div class="w-8 h-1 bg-teal-500 rounded-full"></div>
+            <p
+              class="text-teal-600 font-bold tracking-widest text-sm uppercase font-heading"
+            >
+              Visão Geral do Produto
+            </p>
+          </div>
+          <h2
+            class="font-heading text-4xl font-extrabold text-slate-800 leading-tight"
+          >
+            Funcionalidades <span class="text-teal-600">Essenciais</span>
+          </h2>
+          <p class="text-slate-500 mt-2 text-lg">
+            Um ecossistema completo para o desenvolvimento infantil.
+          </p>
+        </div>
+      </div>
+      <!-- Features Grid (2 Rows x 3 Columns) -->
+      <div
+        class="flex-1 grid grid-cols-3 grid-rows-2 gap-x-8 gap-y-8 pb-4 relative z-10"
+      >
+        <!-- Feature 1: AI Assistant -->
+        <div
+          class="feature-card bg-white rounded-2xl p-6 border border-slate-100 shadow-sm flex flex-col h-full hover:border-teal-200"
+        >
+          <div class="flex items-start justify-between mb-4">
+            <div
+              class="icon-wrapper w-14 h-14 rounded-2xl bg-teal-50 text-teal-600 flex items-center justify-center text-2xl"
+            >
+              <i class="fa-solid fa-robot"></i>
+            </div>
+            <div
+              class="text-xs font-bold text-teal-600 bg-teal-50 px-2 py-1 rounded"
+            >
+              IA
+            </div>
+          </div>
+          <h3 class="font-heading text-xl font-bold text-slate-800 mb-2">
+            Assistente de Aprendizagem
+          </h3>
+          <p class="text-slate-500 text-sm leading-relaxed flex-1">
+            IA conversacional adaptada para crianças que responde "porquês" com
+            linguagem adequada e incentiva o pensamento crítico.
+          </p>
+        </div>
+        <!-- Feature 2: Curiosity Explorer -->
+        <div
+          class="feature-card bg-white rounded-2xl p-6 border border-slate-100 shadow-sm flex flex-col h-full hover:border-blue-200"
+        >
+          <div class="flex items-start justify-between mb-4">
+            <div
+              class="icon-wrapper w-14 h-14 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center text-2xl"
+            >
+              <i class="fa-solid fa-compass"></i>
+            </div>
+            <div
+              class="text-xs font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded"
+            >
+              Explorar
+            </div>
+          </div>
+          <h3 class="font-heading text-xl font-bold text-slate-800 mb-2">
+            Explorador de Curiosidades
+          </h3>
+          <p class="text-slate-500 text-sm leading-relaxed flex-1">
+            Interface visual para navegar por tópicos complexos (Espaço,
+            Dinossauros, Oceanos) de forma interativa e profunda.
+          </p>
+        </div>
+        <!-- Feature 3: Educational Quizzes -->
+        <div
+          class="feature-card bg-white rounded-2xl p-6 border border-slate-100 shadow-sm flex flex-col h-full hover:border-indigo-200"
+        >
+          <div class="flex items-start justify-between mb-4">
+            <div
+              class="icon-wrapper w-14 h-14 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-2xl"
+            >
+              <i class="fa-solid fa-puzzle-piece"></i>
+            </div>
+            <div
+              class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded"
+            >
+              Jogar
+            </div>
+          </div>
+          <h3 class="font-heading text-xl font-bold text-slate-800 mb-2">
+            Quizzes Educacionais
+          </h3>
+          <p class="text-slate-500 text-sm leading-relaxed flex-1">
+            Pequenos desafios diários que reforçam o aprendizado e gamificam o
+            conhecimento sem criar dependência.
+          </p>
+        </div>
+        <!-- Feature 4: Story Builder -->
+        <div
+          class="feature-card bg-white rounded-2xl p-6 border border-slate-100 shadow-sm flex flex-col h-full hover:border-purple-200"
+        >
+          <div class="flex items-start justify-between mb-4">
+            <div
+              class="icon-wrapper w-14 h-14 rounded-2xl bg-purple-50 text-purple-600 flex items-center justify-center text-2xl"
+            >
+              <i class="fa-solid fa-pen-nib"></i>
+            </div>
+            <div
+              class="text-xs font-bold text-purple-600 bg-purple-50 px-2 py-1 rounded"
+            >
+              Criar
+            </div>
+          </div>
+          <h3 class="font-heading text-xl font-bold text-slate-800 mb-2">
+            Construtor de Histórias
+          </h3>
+          <p class="text-slate-500 text-sm leading-relaxed flex-1">
+            Ferramenta co-criativa onde a criança desenvolve narrativas baseadas
+            no que aprendeu, estimulando a escrita.
+          </p>
+        </div>
+        <!-- Feature 5: Safe Communication -->
+        <div
+          class="feature-card bg-white rounded-2xl p-6 border border-slate-100 shadow-sm flex flex-col h-full hover:border-green-200"
+        >
+          <div class="flex items-start justify-between mb-4">
+            <div
+              class="icon-wrapper w-14 h-14 rounded-2xl bg-green-50 text-green-600 flex items-center justify-center text-2xl"
+            >
+              <i class="fa-solid fa-user-shield"></i>
+            </div>
+            <div
+              class="text-xs font-bold text-green-600 bg-green-50 px-2 py-1 rounded"
+            >
+              Segurança
+            </div>
+          </div>
+          <h3 class="font-heading text-xl font-bold text-slate-800 mb-2">
+            Comunicação Segura
+          </h3>
+          <p class="text-slate-500 text-sm leading-relaxed flex-1">
+            Rede fechada para mensagens de voz e texto apenas com membros da
+            família aprovados (pais, avós).
+          </p>
+        </div>
+        <!-- Feature 6: Nature Missions -->
+        <div
+          class="feature-card bg-white rounded-2xl p-6 border border-slate-100 shadow-sm flex flex-col h-full hover:border-amber-200"
+        >
+          <div class="flex items-start justify-between mb-4">
+            <div
+              class="icon-wrapper w-14 h-14 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center text-2xl"
+            >
+              <i class="fa-solid fa-tree"></i>
+            </div>
+            <div
+              class="text-xs font-bold text-amber-600 bg-amber-50 px-2 py-1 rounded"
+            >
+              Offline
+            </div>
+          </div>
+          <h3 class="font-heading text-xl font-bold text-slate-800 mb-2">
+            Missões na Natureza
+          </h3>
+          <p class="text-slate-500 text-sm leading-relaxed flex-1">
+            Desafios que pedem para a criança largar o dispositivo e explorar o
+            mundo real (ex: "Encontre 3 tipos de folhas").
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

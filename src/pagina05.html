@@ -1,0 +1,260 @@
+<!doctype html>
+
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Apresentando First Step</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Open+Sans:wght@400;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Open Sans", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f8fafc;
+      }
+      .slide-container {
+        width: 1280px;
+        height: 720px;
+        display: flex;
+        overflow: hidden;
+        background-color: #ffffff;
+        position: relative;
+      }
+      .font-heading {
+        font-family: "Montserrat", sans-serif;
+      }
+      /* Product Glow Effect */
+      .product-glow {
+        box-shadow: 0 0 60px rgba(20, 184, 166, 0.15);
+      }
+      /* Custom shape for background */
+      .bg-shape {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 55%;
+        height: 100%;
+        background-color: #f0fdfa; /* Teal-50 */
+        clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+        z-index: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide-container">
+      <!-- Background Shape -->
+      <div class="bg-shape"></div>
+      <!-- Left Content Section (45%) -->
+      <div
+        class="w-5/12 h-full flex flex-col justify-center pl-16 pr-8 z-10 relative"
+      >
+        <div class="mb-2">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-1 bg-teal-500 rounded-full"></div>
+            <p
+              class="text-teal-600 font-bold tracking-widest text-sm uppercase font-heading"
+            >
+              A Solução
+            </p>
+          </div>
+          <h2
+            class="font-heading text-5xl font-extrabold text-slate-800 leading-tight mb-2"
+          >
+            Apresentando<br />
+            <span class="text-teal-600">First Step</span>
+          </h2>
+          <p class="text-slate-500 font-medium text-lg mb-8">
+            O primeiro dispositivo com IA dedicado à curiosidade infantil (7–12
+            anos).
+          </p>
+        </div>
+        <!-- Feature List with Icons -->
+        <div class="space-y-6">
+          <!-- Feature 1 -->
+          <div class="flex items-start gap-4">
+            <div
+              class="w-12 h-12 rounded-xl bg-teal-100 flex items-center justify-center text-teal-600 text-xl flex-shrink-0"
+            >
+              <i class="fa-solid fa-lightbulb"></i>
+            </div>
+            <div>
+              <h3 class="font-heading text-xl font-bold text-slate-800">
+                Aprendizado por Curiosidade
+              </h3>
+              <p class="text-slate-600 text-sm leading-relaxed">
+                IA que responde "porquês" e guia a criança em jornadas de
+                descoberta, não apenas consumo passivo.
+              </p>
+            </div>
+          </div>
+          <!-- Feature 2 -->
+          <div class="flex items-start gap-4">
+            <div
+              class="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center text-blue-600 text-xl flex-shrink-0"
+            >
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <div>
+              <h3 class="font-heading text-xl font-bold text-slate-800">
+                Ambiente 100% Seguro
+              </h3>
+              <p class="text-slate-600 text-sm leading-relaxed">
+                Ecossistema fechado. Sem redes sociais abertas, sem anúncios,
+                apenas contatos aprovados pelos pais.
+              </p>
+            </div>
+          </div>
+          <!-- Feature 3 -->
+          <div class="flex items-start gap-4">
+            <div
+              class="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center text-slate-600 text-xl flex-shrink-0"
+            >
+              <i class="fa-solid fa-ban"></i>
+            </div>
+            <div>
+              <h3 class="font-heading text-xl font-bold text-slate-800">
+                Design Anti-Viciante
+              </h3>
+              <p class="text-slate-600 text-sm leading-relaxed">
+                Sem "rolagem infinita" ou recompensas de dopamina barata. Fim
+                natural para cada sessão de uso.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Validation Badge -->
+        <div class="mt-10 flex items-center gap-3">
+          <div class="flex -space-x-2">
+            <div
+              class="w-8 h-8 rounded-full bg-teal-200 border-2 border-white flex items-center justify-center text-xs font-bold text-teal-700"
+            >
+              A
+            </div>
+            <div
+              class="w-8 h-8 rounded-full bg-blue-200 border-2 border-white flex items-center justify-center text-xs font-bold text-blue-700"
+            >
+              M
+            </div>
+            <div
+              class="w-8 h-8 rounded-full bg-slate-200 border-2 border-white flex items-center justify-center text-xs font-bold text-slate-700"
+            >
+              +
+            </div>
+          </div>
+          <p class="text-sm font-bold text-slate-400">
+            Validado por especialistas em pedagogia
+          </p>
+        </div>
+      </div>
+      <!-- Right Visual Section (55%) -->
+      <div
+        class="w-7/12 h-full relative z-10 flex items-center justify-center pr-12"
+      >
+        <!-- Central Device Image Container -->
+        <div class="relative w-full max-w-lg">
+          <!-- Main Device Image Placeholder (Using a generic tablet-like device image) -->
+          <div
+            class="relative bg-white rounded-[2.5rem] shadow-2xl border-8 border-slate-800 aspect-[3/4] overflow-hidden transform rotate-3 product-glow mx-auto w-80"
+          >
+            <!-- Screen Content Mockup -->
+            <div class="absolute inset-0 bg-slate-50 flex flex-col">
+              <!-- Status Bar -->
+              <div
+                class="h-6 bg-slate-800 w-full flex justify-end px-4 items-center gap-2"
+              >
+                <div class="w-3 h-3 bg-green-400 rounded-full"></div>
+                <div class="w-4 h-2 bg-white rounded-sm"></div>
+              </div>
+              <!-- UI Content -->
+              <div
+                class="p-6 flex flex-col h-full bg-gradient-to-b from-teal-50 to-white"
+              >
+                <!-- AI Avatar -->
+                <div class="flex justify-center mb-6 mt-4">
+                  <div
+                    class="w-20 h-20 bg-teal-500 rounded-full flex items-center justify-center shadow-lg border-4 border-white animate-pulse"
+                  >
+                    <i class="fa-solid fa-robot text-3xl text-white"></i>
+                  </div>
+                </div>
+                <!-- Chat/Interaction Bubble -->
+                <div
+                  class="bg-white p-4 rounded-2xl rounded-tl-none shadow-md mb-4 border border-slate-100"
+                >
+                  <p class="text-slate-700 font-bold text-sm mb-1">
+                    Olá, explorador!
+                  </p>
+                  <p class="text-slate-500 text-xs">
+                    O que você quer descobrir sobre o espaço hoje?
+                  </p>
+                </div>
+                <!-- Options -->
+                <div class="grid grid-cols-2 gap-3 mt-auto mb-8">
+                  <div
+                    class="bg-blue-50 p-3 rounded-xl border border-blue-100 text-center"
+                  >
+                    <i class="fa-solid fa-rocket text-blue-500 mb-1"></i>
+                    <p class="text-xs font-bold text-blue-700">Missão Marte</p>
+                  </div>
+                  <div
+                    class="bg-teal-50 p-3 rounded-xl border border-teal-100 text-center"
+                  >
+                    <i class="fa-solid fa-star text-teal-500 mb-1"></i>
+                    <p class="text-xs font-bold text-teal-700">Estrelas</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Floating Callout Cards -->
+          <!-- Callout 1: Durability -->
+          <div
+            class="absolute top-20 -left-4 bg-white p-3 rounded-xl shadow-lg border-l-4 border-teal-500 animate-bounce"
+            style="animation-duration: 3s"
+          >
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-dumbbell text-teal-500"></i>
+              <p class="text-xs font-bold text-slate-700">
+                Resistente a quedas
+              </p>
+            </div>
+          </div>
+          <!-- Callout 2: Voice AI -->
+          <div
+            class="absolute bottom-32 -right-8 bg-white p-3 rounded-xl shadow-lg border-l-4 border-blue-500 animate-bounce"
+            style="animation-duration: 4s"
+          >
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-microphone text-blue-500"></i>
+              <p class="text-xs font-bold text-slate-700">
+                Comando de Voz Seguro
+              </p>
+            </div>
+          </div>
+          <!-- Callout 3: Parents -->
+          <div
+            class="absolute bottom-10 left-0 bg-slate-800 text-white p-3 rounded-xl shadow-lg"
+          >
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-lock text-yellow-400"></i>
+              <p class="text-xs font-bold">Painel Parental Incluso</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

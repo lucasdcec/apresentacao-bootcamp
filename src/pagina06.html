@@ -1,0 +1,408 @@
+<!doctype html>
+
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>First Step - Como as Crianças Usam</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Open+Sans:wght@400;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Open Sans", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f8fafc;
+      }
+      .slide-container {
+        width: 1280px;
+        height: 720px;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        background-color: #ffffff;
+        position: relative;
+      }
+      .font-heading {
+        font-family: "Montserrat", sans-serif;
+      }
+
+      /* Device Mockup Styles */
+      .device-mockup {
+        width: 220px;
+        height: 320px;
+        background-color: #ffffff;
+        border: 8px solid #1e293b; /* Slate-800 */
+        border-radius: 24px;
+        position: relative;
+        overflow: hidden;
+        box-shadow:
+          0 10px 25px -5px rgba(0, 0, 0, 0.1),
+          0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .device-screen {
+        width: 100%;
+        height: 100%;
+        background-color: #f1f5f9; /* Slate-100 */
+        display: flex;
+        flex-col: column;
+        padding: 12px;
+        position: relative;
+      }
+
+      .step-number {
+        width: 40px;
+        height: 40px;
+        background-color: #14b8a6; /* Teal-500 */
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.25rem;
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 20;
+        border: 4px solid white;
+      }
+
+      /* Connecting Line */
+      .connector-line {
+        position: absolute;
+        top: 50%;
+        left: 100px;
+        right: 100px;
+        height: 4px;
+        background-image: linear-gradient(
+          to right,
+          #cbd5e1 50%,
+          transparent 50%
+        );
+        background-size: 20px 100%;
+        z-index: 0;
+        transform: translateY(-20px);
+      }
+
+      /* UI Element Helpers */
+      .chat-bubble-left {
+        background-color: #e2e8f0;
+        border-radius: 12px 12px 12px 0;
+        padding: 8px;
+        margin-bottom: 8px;
+        font-size: 8px;
+        color: #475569;
+        width: 80%;
+      }
+      .chat-bubble-right {
+        background-color: #14b8a6;
+        border-radius: 12px 12px 0 12px;
+        padding: 8px;
+        margin-bottom: 8px;
+        font-size: 8px;
+        color: white;
+        width: 80%;
+        align-self: flex-end;
+      }
+      .topic-card {
+        background-color: white;
+        border-radius: 8px;
+        padding: 6px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+      }
+      .quiz-option {
+        background-color: white;
+        border: 1px solid #cbd5e1;
+        border-radius: 6px;
+        padding: 6px 10px;
+        margin-bottom: 6px;
+        font-size: 9px;
+        color: #64748b;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .quiz-option.correct {
+        background-color: #f0fdf4;
+        border-color: #22c55e;
+        color: #15803d;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide-container">
+      <!-- Background Decor -->
+      <div
+        class="absolute top-0 right-0 w-64 h-64 bg-teal-50 rounded-bl-full z-0 opacity-50"
+      ></div>
+      <div
+        class="absolute bottom-0 left-0 w-48 h-48 bg-blue-50 rounded-tr-full z-0 opacity-50"
+      ></div>
+      <!-- Header Section -->
+      <div class="px-16 pt-10 pb-4 z-10 relative">
+        <div class="flex items-center gap-3 mb-2">
+          <div class="w-8 h-1 bg-teal-500 rounded-full"></div>
+          <p
+            class="text-teal-600 font-bold tracking-widest text-sm uppercase font-heading"
+          >
+            Experiência do Usuário
+          </p>
+        </div>
+        <h2
+          class="font-heading text-4xl font-extrabold text-slate-800 leading-tight"
+        >
+          A Jornada do <span class="text-teal-600">Conhecimento</span>
+        </h2>
+        <p class="text-slate-500 mt-2 text-lg">
+          Como a curiosidade se transforma em aprendizado no First Step.
+        </p>
+      </div>
+      <!-- Flow Content -->
+      <div class="flex-1 flex items-center justify-center relative px-10 z-10">
+        <!-- Connector Line behind steps -->
+        <div class="connector-line"></div>
+        <div class="grid grid-cols-4 gap-8 w-full max-w-6xl">
+          <!-- Step 1: Pergunta -->
+          <div class="flex flex-col items-center group">
+            <div class="relative mb-6">
+              <div class="step-number">1</div>
+              <div class="device-mockup transform group-hover:-translate-y-2">
+                <div class="device-screen bg-slate-50">
+                  <!-- UI: Chat Header -->
+                  <div
+                    class="flex items-center gap-2 mb-4 pb-2 border-b border-slate-200"
+                  >
+                    <div
+                      class="w-6 h-6 rounded-full bg-teal-500 flex items-center justify-center text-white text-[10px]"
+                    >
+                      <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <div class="text-[10px] font-bold text-slate-700">
+                      Assistente IA
+                    </div>
+                  </div>
+                  <!-- UI: Bubbles -->
+                  <div class="flex flex-col flex-1">
+                    <div class="chat-bubble-right">
+                      <p>Por que o céu é azul?</p>
+                    </div>
+                    <div class="chat-bubble-left">
+                      <p>
+                        Ótima pergunta! A luz do sol tem todas as cores, mas o
+                        ar espalha mais o azul...
+                      </p>
+                    </div>
+                    <div class="chat-bubble-left">
+                      <p>Quer saber mais sobre luz ou sobre o sol?</p>
+                    </div>
+                  </div>
+                  <!-- UI: Mic Button -->
+                  <div class="mt-auto flex justify-center">
+                    <div
+                      class="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center text-white shadow-md"
+                    >
+                      <i class="fa-solid fa-microphone"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="text-center">
+              <h3 class="font-heading text-lg font-bold text-slate-800 mb-1">
+                Perguntar
+              </h3>
+              <p class="text-sm text-slate-500 leading-snug px-2">
+                A criança usa voz para expressar sua curiosidade natural.
+              </p>
+            </div>
+          </div>
+          <!-- Step 2: Explorar -->
+          <div class="flex flex-col items-center group">
+            <div class="relative mb-6">
+              <div class="step-number">2</div>
+              <div class="device-mockup transform group-hover:-translate-y-2">
+                <div class="device-screen bg-slate-50">
+                  <!-- UI: Header -->
+                  <div
+                    class="text-[12px] font-bold text-slate-800 mb-3 text-center"
+                  >
+                    Explorar Tópicos
+                  </div>
+                  <!-- UI: Grid -->
+                  <div class="grid grid-cols-2 gap-2 flex-1 content-start">
+                    <div class="topic-card bg-blue-50 border border-blue-100">
+                      <i
+                        class="fa-solid fa-rocket text-blue-500 text-lg mb-1"
+                      ></i>
+                      <span class="text-[8px] font-bold text-blue-700"
+                        >Espaço</span
+                      >
+                    </div>
+                    <div class="topic-card bg-green-50 border border-green-100">
+                      <i
+                        class="fa-solid fa-leaf text-green-500 text-lg mb-1"
+                      ></i>
+                      <span class="text-[8px] font-bold text-green-700"
+                        >Natureza</span
+                      >
+                    </div>
+                    <div
+                      class="topic-card bg-orange-50 border border-orange-100"
+                    >
+                      <i
+                        class="fa-solid fa-landmark text-orange-500 text-lg mb-1"
+                      ></i>
+                      <span class="text-[8px] font-bold text-orange-700"
+                        >História</span
+                      >
+                    </div>
+                    <div
+                      class="topic-card bg-purple-50 border border-purple-100"
+                    >
+                      <i
+                        class="fa-solid fa-flask text-purple-500 text-lg mb-1"
+                      ></i>
+                      <span class="text-[8px] font-bold text-purple-700"
+                        >Ciência</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="text-center">
+              <h3 class="font-heading text-lg font-bold text-slate-800 mb-1">
+                Explorar
+              </h3>
+              <p class="text-sm text-slate-500 leading-snug px-2">
+                Navegação visual por temas de interesse profundo.
+              </p>
+            </div>
+          </div>
+          <!-- Step 3: Aprender (Quiz) -->
+          <div class="flex flex-col items-center group">
+            <div class="relative mb-6">
+              <div class="step-number">3</div>
+              <div class="device-mockup transform group-hover:-translate-y-2">
+                <div class="device-screen bg-slate-50">
+                  <!-- UI: Progress -->
+                  <div class="w-full bg-slate-200 h-1 rounded-full mb-4">
+                    <div class="bg-yellow-400 h-1 rounded-full w-2/3"></div>
+                  </div>
+                  <!-- UI: Question -->
+                  <div
+                    class="text-[10px] font-bold text-slate-700 mb-4 bg-white p-2 rounded shadow-sm border border-slate-100"
+                  >
+                    Qual planeta é conhecido como Planeta Vermelho?
+                  </div>
+                  <!-- UI: Options -->
+                  <div class="flex flex-col gap-1">
+                    <div class="quiz-option">
+                      <span>Júpiter</span>
+                      <i class="fa-regular fa-circle text-slate-300"></i>
+                    </div>
+                    <div class="quiz-option correct">
+                      <span>Marte</span>
+                      <i class="fa-solid fa-circle-check text-green-500"></i>
+                    </div>
+                    <div class="quiz-option">
+                      <span>Saturno</span>
+                      <i class="fa-regular fa-circle text-slate-300"></i>
+                    </div>
+                  </div>
+                  <!-- UI: Feedback -->
+                  <div class="mt-auto bg-green-100 p-2 rounded text-center">
+                    <span class="text-[9px] font-bold text-green-700"
+                      >Correto! +10 pontos</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="text-center">
+              <h3 class="font-heading text-lg font-bold text-slate-800 mb-1">
+                Aprender
+              </h3>
+              <p class="text-sm text-slate-500 leading-snug px-2">
+                Quizzes interativos para fixar o conhecimento.
+              </p>
+            </div>
+          </div>
+          <!-- Step 4: Criar -->
+          <div class="flex flex-col items-center group">
+            <div class="relative mb-6">
+              <div class="step-number">4</div>
+              <div class="device-mockup transform group-hover:-translate-y-2">
+                <div class="device-screen bg-slate-50">
+                  <!-- UI: Story Header -->
+                  <div
+                    class="bg-indigo-500 text-white p-2 -mx-3 -mt-3 mb-3 rounded-b-xl shadow-sm text-center"
+                  >
+                    <span class="text-[10px] font-bold"
+                      >Minha História Espacial</span
+                    >
+                  </div>
+                  <!-- UI: Content Placeholder -->
+                  <div
+                    class="flex-1 bg-white border border-slate-200 rounded-lg p-2 mb-2 relative overflow-hidden"
+                  >
+                    <div
+                      class="w-full h-16 bg-slate-100 rounded mb-2 flex items-center justify-center text-slate-300"
+                    >
+                      <i class="fa-solid fa-image"></i>
+                    </div>
+                    <div class="space-y-1">
+                      <div class="h-1 bg-slate-200 rounded w-full"></div>
+                      <div class="h-1 bg-slate-200 rounded w-5/6"></div>
+                      <div class="h-1 bg-slate-200 rounded w-4/6"></div>
+                    </div>
+                    <!-- Edit Icon -->
+                    <div
+                      class="absolute bottom-2 right-2 w-6 h-6 bg-indigo-500 rounded-full flex items-center justify-center text-white text-[10px] shadow-lg"
+                    >
+                      <i class="fa-solid fa-pen"></i>
+                    </div>
+                  </div>
+                  <!-- UI: Button -->
+                  <div
+                    class="w-full bg-teal-500 text-white text-[9px] font-bold py-2 rounded text-center"
+                  >
+                    Compartilhar com a Mãe
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="text-center">
+              <h3 class="font-heading text-lg font-bold text-slate-800 mb-1">
+                Criar
+              </h3>
+              <p class="text-sm text-slate-500 leading-snug px-2">
+                Aplicação do aprendizado em histórias criativas.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

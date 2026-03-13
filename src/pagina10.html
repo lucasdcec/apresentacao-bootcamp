@@ -1,0 +1,156 @@
+<!doctype html>
+
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>First Step - Visão</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Open+Sans:wght@300;400;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Open Sans", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f8fafc;
+      }
+      .slide-container {
+        width: 1280px;
+        height: 720px;
+        display: flex;
+        overflow: hidden;
+        background-color: #1e293b;
+        position: relative;
+      }
+      .font-heading {
+        font-family: "Montserrat", sans-serif;
+      }
+      .bg-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0;
+      }
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(
+          15,
+          23,
+          42,
+          0.88
+        ); /* Slate-900 with high opacity for readability */
+        z-index: 10;
+      }
+      .glow-text {
+        text-shadow: 0 0 20px rgba(20, 184, 166, 0.3);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide-container">
+      <!-- Background Image (Nature/Exploration context) -->
+      <img
+        alt="Crianças explorando a natureza"
+        class="bg-image"
+        src="https://page.gensparksite.com/slides_images/53298e44121bec4792d008b254ced3bb.webp"
+      />
+      <!-- Dark Overlay -->
+      <div class="overlay"></div>
+      <!-- Content -->
+      <div
+        class="relative z-20 w-full h-full flex flex-col items-center justify-center text-center px-24"
+      >
+        <!-- Icon Mark -->
+        <div class="mb-10">
+          <div
+            class="w-24 h-24 bg-teal-500 rounded-full flex items-center justify-center shadow-2xl border-4 border-slate-700 mx-auto mb-6"
+          >
+            <i class="fa-solid fa-leaf text-4xl text-white"></i>
+          </div>
+          <p
+            class="text-teal-400 font-bold tracking-[0.3em] text-sm uppercase font-heading"
+          >
+            Nossa Visão
+          </p>
+        </div>
+        <!-- Main Title -->
+        <h1
+          class="font-heading text-6xl font-extrabold text-white mb-6 leading-tight glow-text"
+        >
+          Transformar telas em portas<br />
+          para o <span class="text-teal-400">Mundo Real</span>.
+        </h1>
+        <!-- Mission Statement -->
+        <div class="max-w-4xl mb-12">
+          <p class="text-2xl text-slate-300 font-light leading-relaxed">
+            Acreditamos em um futuro onde a tecnologia não isola, mas inspira.
+            Onde cada clique desperta uma pergunta e cada resposta convida a uma
+            nova aventura.
+          </p>
+        </div>
+        <!-- Divider -->
+        <div class="w-32 h-1 bg-teal-500 rounded-full mb-12 opacity-50"></div>
+        <!-- Call to Action -->
+        <div class="flex flex-col items-center gap-6">
+          <p
+            class="text-white text-lg font-bold uppercase tracking-widest font-heading"
+          >
+            Junte-se a nós para dar o primeiro passo
+          </p>
+          <div
+            class="bg-white text-slate-900 px-12 py-5 rounded-full font-heading font-bold text-xl hover:bg-teal-50 transition-colors cursor-pointer flex items-center gap-4 shadow-xl border-4 border-transparent hover:border-teal-400 box-border"
+          >
+            <span>Vamos Começar</span>
+            <i class="fa-solid fa-arrow-right text-teal-600"></i>
+          </div>
+        </div>
+        <!-- Footer / Contact Info -->
+        <div
+          class="absolute bottom-10 w-full flex justify-between px-16 text-slate-400 text-sm font-medium border-t border-slate-700/50 pt-6"
+        >
+          <div class="flex items-center gap-8">
+            <p
+              class="flex items-center gap-2 hover:text-teal-400 transition-colors cursor-pointer"
+            >
+              <i class="fa-solid fa-envelope text-teal-500"></i>
+              hello@firststep.ai
+            </p>
+            <p
+              class="flex items-center gap-2 hover:text-teal-400 transition-colors cursor-pointer"
+            >
+              <i class="fa-solid fa-globe text-teal-500"></i> www.firststep.ai
+            </p>
+          </div>
+          <div class="flex items-center gap-6">
+            <p class="flex items-center gap-2">
+              <i class="fa-brands fa-instagram text-slate-500"></i>
+              @firststep.kids
+            </p>
+            <p class="flex items-center gap-2">
+              <i class="fa-brands fa-linkedin text-slate-500"></i> First Step
+              Technologies
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

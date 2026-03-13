@@ -1,0 +1,220 @@
+<!doctype html>
+
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>First Step - A Oportunidade</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Open+Sans:wght@400;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Open Sans", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f8fafc;
+      }
+      .slide-container {
+        width: 1280px;
+        height: 720px;
+        display: flex;
+        flex-direction: column;
+        background-color: #ffffff;
+        position: relative;
+        overflow: hidden;
+      }
+      .font-heading {
+        font-family: "Montserrat", sans-serif;
+      }
+      .bg-pattern {
+        background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+        background-size: 20px 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide-container bg-pattern">
+      <!-- Header -->
+      <div class="px-16 pt-10 pb-4 z-10">
+        <div class="flex items-center gap-3 mb-2">
+          <div class="w-8 h-1 bg-teal-500 rounded-full"></div>
+          <p
+            class="text-teal-600 font-bold tracking-widest text-sm uppercase font-heading"
+          >
+            A Oportunidade
+          </p>
+        </div>
+        <h2
+          class="font-heading text-4xl font-extrabold text-slate-800 leading-tight"
+        >
+          Tecnologia como <span class="text-teal-600">Companheira</span>
+        </h2>
+        <p class="text-slate-500 mt-2 text-lg">
+          Transformando o tempo de tela em tempo de crescimento.
+        </p>
+      </div>
+      <!-- Main Comparison Content -->
+      <div
+        class="flex-1 px-16 pb-12 flex items-center justify-center gap-8 relative z-10"
+      >
+        <!-- LEFT SIDE: The Old Way (Entertainment) -->
+        <div
+          class="flex-1 h-full bg-white rounded-3xl shadow-lg border border-slate-200 overflow-hidden flex flex-col relative"
+        >
+          <div class="absolute top-0 left-0 w-full h-2 bg-red-400"></div>
+          <div class="p-8 flex flex-col h-full">
+            <div class="flex items-center justify-between mb-6">
+              <div
+                class="w-14 h-14 rounded-2xl bg-red-50 flex items-center justify-center text-red-500 text-2xl"
+              >
+                <i class="fa-solid fa-gamepad"></i>
+              </div>
+              <span
+                class="bg-red-100 text-red-600 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide"
+                >O Padrão Atual</span
+              >
+            </div>
+            <h3 class="font-heading text-2xl font-bold text-slate-800 mb-6">
+              Dispositivo de Entretenimento
+            </h3>
+            <div class="space-y-5 flex-1">
+              <div class="flex items-start gap-4">
+                <i class="fa-solid fa-xmark text-red-400 mt-1"></i>
+                <div>
+                  <p class="font-bold text-slate-700 text-sm">
+                    Foco em Retenção
+                  </p>
+                  <p class="text-slate-500 text-sm leading-snug">
+                    Algoritmos desenhados para viciar e prender a atenção.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <i class="fa-solid fa-xmark text-red-400 mt-1"></i>
+                <div>
+                  <p class="font-bold text-slate-700 text-sm">
+                    Consumo Passivo
+                  </p>
+                  <p class="text-slate-500 text-sm leading-snug">
+                    Assistir vídeos sem interação ou pensamento crítico.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <i class="fa-solid fa-xmark text-red-400 mt-1"></i>
+                <div>
+                  <p class="font-bold text-slate-700 text-sm">
+                    Riscos de Segurança
+                  </p>
+                  <p class="text-slate-500 text-sm leading-snug">
+                    Internet aberta, ads e contatos não verificados.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="mt-6 pt-6 border-t border-slate-100 text-center">
+              <p class="text-slate-400 font-bold text-sm">
+                Resultado: Ansiedade &amp; Distração
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- CENTER: Transition Icon -->
+        <div
+          class="flex flex-col items-center justify-center gap-2 text-slate-300"
+        >
+          <i
+            class="fa-solid fa-circle-arrow-right text-5xl text-teal-500 shadow-xl rounded-full bg-white"
+          ></i>
+        </div>
+        <!-- RIGHT SIDE: The New Way (Learning Companion) -->
+        <div
+          class="flex-1 h-full bg-teal-50 rounded-3xl shadow-xl border-2 border-teal-500 overflow-hidden flex flex-col relative transform scale-105 z-20"
+        >
+          <div class="absolute top-0 left-0 w-full h-2 bg-teal-500"></div>
+          <div class="p-8 flex flex-col h-full">
+            <div class="flex items-center justify-between mb-6">
+              <div
+                class="w-14 h-14 rounded-2xl bg-teal-100 flex items-center justify-center text-teal-600 text-2xl shadow-sm"
+              >
+                <i class="fa-solid fa-robot"></i>
+              </div>
+              <span
+                class="bg-teal-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide"
+                >First Step</span
+              >
+            </div>
+            <h3 class="font-heading text-2xl font-bold text-slate-800 mb-6">
+              Companheiro de Aprendizado
+            </h3>
+            <div class="space-y-5 flex-1">
+              <div class="flex items-start gap-4">
+                <div
+                  class="w-6 h-6 rounded-full bg-teal-200 flex items-center justify-center flex-shrink-0"
+                >
+                  <i class="fa-solid fa-check text-teal-700 text-xs"></i>
+                </div>
+                <div>
+                  <p class="font-bold text-slate-800 text-sm">
+                    Foco em Curiosidade
+                  </p>
+                  <p class="text-slate-600 text-sm leading-snug">
+                    IA que estimula perguntas e aprofunda o conhecimento.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div
+                  class="w-6 h-6 rounded-full bg-teal-200 flex items-center justify-center flex-shrink-0"
+                >
+                  <i class="fa-solid fa-check text-teal-700 text-xs"></i>
+                </div>
+                <div>
+                  <p class="font-bold text-slate-800 text-sm">
+                    Exploração Ativa
+                  </p>
+                  <p class="text-slate-600 text-sm leading-snug">
+                    Missões no mundo real e criação de histórias.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div
+                  class="w-6 h-6 rounded-full bg-teal-200 flex items-center justify-center flex-shrink-0"
+                >
+                  <i class="fa-solid fa-check text-teal-700 text-xs"></i>
+                </div>
+                <div>
+                  <p class="font-bold text-slate-800 text-sm">
+                    Ambiente 100% Seguro
+                  </p>
+                  <p class="text-slate-600 text-sm leading-snug">
+                    Sem ads, sem internet aberta, rede familiar fechada.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="mt-6 pt-6 border-t border-teal-200 text-center bg-white/50 rounded-b-xl -mx-8 -mb-8 pb-8"
+            >
+              <p class="text-teal-700 font-bold text-sm">
+                Resultado: Autonomia &amp; Desenvolvimento
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
